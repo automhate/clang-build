@@ -666,7 +666,7 @@ def fetch_llvm_binutils(root_folder, llvm_folder, update, shallow, ref):
                                check=True,
                                cwd=llvm_folder)
     else:
-        utils.print_header("Downloading LLVM")
+        utils.print_header("Downloading Liilium LLVM Fork")
 
         extra_args = ()
         if shallow:
@@ -675,7 +675,7 @@ def fetch_llvm_binutils(root_folder, llvm_folder, update, shallow, ref):
                 extra_args += ("--no-single-branch", )
         subprocess.run([
             "git", "clone", *extra_args,
-            "https://github.com/llvm/llvm-project", llvm_folder
+            "https://github.com/liliumproject/llvm-project", llvm_folder
         ],
                        check=True)
         subprocess.run(["git", "checkout", ref], check=True, cwd=llvm_folder)
