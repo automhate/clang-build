@@ -79,7 +79,7 @@ def parse_parameters(root_folder):
 
                         """),
                         type=str,
-                        default="main")
+                        default="next")
     parser.add_argument("-B",
                         "--build-folder",
                         help=textwrap.dedent("""\
